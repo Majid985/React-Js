@@ -52,7 +52,7 @@ function App() {
         <div ><button className='home-page-button' onClick={onMultiplication}>Multiplication</ button></div>
       </div>)
     }, 60000)
-    setPage(<onMultiplication />)
+    setPage(<Multiplication />)
   }
 
   return (
