@@ -3,7 +3,7 @@ import Options from './Options'
 import './style.css'
 import TimeLine from './TimeLine'
 
-class Multiplicaton extends Component {
+class Multiplication extends Component {
 
   constructor(props) {
     super(props)
@@ -83,4 +83,4 @@ class Multiplicaton extends Component {
   }
 }
 
-export default Multiplicaton
+export default Multiplication
