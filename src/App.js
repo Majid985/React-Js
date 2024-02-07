@@ -2,6 +2,7 @@ import './App.css';
 import { useState } from 'react'
 import Addition from '../../aritmatic-game/src/components/Addition';
 import Subtraction from '../../aritmatic-game/src/components/Subtraction';
+import Multiplication from './components/Multiplication'
 
 
 
