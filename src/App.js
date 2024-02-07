@@ -1,23 +1,63 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react'
+import Addition from '../../aritmatic-game/src/components/Addition';
+import Subtraction from '../../aritmatic-game/src/components/Subtraction';
+
+
 
 function App() {
+
+  
+
+  const [page, setPage] = useState(
+    <div>
+        <h2>SELECT THE GAME</h2>
+        <div ><button className='home-page-button' onClick={onAddition}>Addition</ button></div>
+        <div ><button className='home-page-button' onClick={onSubtraction}>Subtraction</ button></div>
+        <div ><button className='home-page-button' onClick={onMultiplication}>Multiplication</ button></div>
+      </div>)
+
+    
+
+  function onAddition() {
+    setTimeout(() => {
+      setPage(<div>
+        <h2>SELECT THE GAME</h2>
+        <div ><button className='home-page-button' onClick={onAddition}>Addition</ button></div>
+        <div ><button className='home-page-button' onClick={onSubtraction}>Subtraction</ button></div>
+        <div ><button className='home-page-button' onClick={onMultiplication}>Multiplication</ button></div>
+      </div>)
+    }, 60000)
+    setPage(<Addition />)
+  }
+
+  function onSubtraction() {
+    setTimeout(() => {
+      setPage(<div>
+        <h2>SELECT THE GAME</h2>
+        <div ><button className='home-page-button' onClick={onAddition}>Addition</ button></div>
+        <div ><button className='home-page-button' onClick={onSubtraction}>Subtraction</ button></div>
+        <div ><button className='home-page-button' onClick={onMultiplication}>Multiplication</ button></div>
+      </div>)
+    }, 60000)
+    setPage(<Subtraction />)
+  }
+
+  function onMultiplication() {
+    setTimeout(() => {
+      setPage(<div>
+        <h2>SELECT THE GAME</h2>
+        <div ><button className='home-page-button' onClick={onAddition}>Addition</ button></div>
+        <div ><button className='home-page-button' onClick={onSubtraction}>Subtraction</ button></div>
+        <div ><button className='home-page-button' onClick={onMultiplication}>Multiplication</ button></div>
+      </div>)
+    }, 60000)
+    setPage(<onMultiplication />)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {page}
     </div>
   );
 }
